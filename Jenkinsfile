@@ -4,13 +4,13 @@ pipeline{
     stage{'SCM THE PROJECT FROM GITHUB'}
     { 
       steps{
-        git 'https://github.com/pranshu-paliwal/hello-world.git'
+        sh 'git clone https://github.com/pranshu-paliwal/hello-world.git'
       }
     }
     stage{'Building the project'}
     {
       steps{
-        mvn clean package
+        sh 'mvn clean package'
       }
     }
   }
